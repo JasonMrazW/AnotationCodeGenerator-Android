@@ -1,33 +1,33 @@
 # AnotationCodeGenerator-Android
 基于jdom，读取layout文件（xml)形式，生成符合androidAnnotaion规范的代码。
 
-代码包括：
+代码包括：\r\n
 1.Activity
   @EAActivity
-  
+  \r\n
 2.Fragment
   @Fragment
-
+\r\n
 3.类
   @EBean
-  
-xml解析规则：
+  \r\n
+xml解析规则：\r\n
 1.解析所有XML节点，id字段赋值以后即命中；
-
+\r\n
 2.读取的节点数据包括：标签名（控件名）、android:id属性，layout属性。
-
+\r\n
 3.支持嵌套xml，支持include标签解析。
-
+\r\n
 4.生成的代码中包括以下几种类型：
-
+\r\n
   a.类描述.包括@EActivity,@EFragment,@EBean
-  
+  \r\n
   b.viewById
-  
+  \r\n
   c.@Click事件
-  
+  \r\n
   d.@TextChanged事件
-  
+  \r\n
   e.基于父类访问网络的回调
-
+\r\n
 嘿嘿，偷偷懒，不用老是重复复制粘贴。
