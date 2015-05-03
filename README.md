@@ -3,33 +3,33 @@
 
 代码包括：
 
-1.Activity
-  @EAActivity
+  1.Activity
+   @EAActivity
  
-2.Fragment
-  @Fragment
+  2.Fragment
+    @Fragment
 
-3.类
-  @EBean
+  3.类
+    @EBean
  
 xml解析规则：
 
-1.解析所有XML节点，id字段赋值以后即命中；
+  1.解析所有XML节点，id字段赋值以后即命中；
 
-2.读取的节点数据包括：标签名（控件名）、android:id属性，layout属性。
+  2.读取的节点数据包括：标签名（控件名）、android:id属性，layout属性。
 
-3.支持嵌套xml，支持include标签解析。
+  3.支持嵌套xml，支持include标签解析。
 
-4.生成的代码中包括以下几种类型：
+  4.生成的代码中包括以下几种类型：
 
-  a.类描述.包括@EActivity,@EFragment,@EBean
+    a.类描述.包括@EActivity,@EFragment,@EBean
   
-  b.viewById
+    b.viewById
   
-  c.@Click事件
+    c.@Click事件
   
-  d.@TextChanged事件
+    d.@TextChanged事件
  
-  e.基于父类访问网络的回调
+    e.基于父类访问网络的回调
 
 嘿嘿，可以提高开发效率，不用老是重复复制粘贴。
