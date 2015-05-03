@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="wrap_content"
+    layout_height="wrap_content" >
+
+    <EditText
+        id="@+id/validate_et"
+        layout_width="match_parent"
+        layout_height="wrap_content"
+        background="@color/user_login_text_hint_background"
+        hint="@string/user_validate"
+        inputType="phone"
+        textColor="@color/user_register_agree_color"
+        textColorHint="@color/user_register_agree_color"
+        textSize="@dimen/text_size_22"
+        maxLength="4"
+        />
+
+    <ImageView
+        layout_width="match_parent"
+        layout_height="1dp"
+        layout_below="@+id/validate_et"
+         layout_marginTop="@dimen/userLogin_line_toEditText"
+        src="@color/user_login_line_color" />
+
+<ImageButton
+    id="@+id/validateDeleteIcon"
+    layout_width="@dimen/user_input_delete_height"
+    layout_height="@dimen/user_input_delete_height"
+    layout_alignRight="@+id/validate_et"
+    background="@color/transparent"
+    src="@drawable/user_input_delete"
+    visibility="gone" />
+
+</RelativeLayout>

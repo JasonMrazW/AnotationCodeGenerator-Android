@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="match_parent"
+    layout_height="match_parent"
+    orientation="vertical"
+    id="@+id/layoutMain" >
+
+    <ImageButton
+        id="@+id/back_but"
+        layout_width="wrap_content"
+        layout_height="wrap_content"
+        layout_alignParentLeft="true"
+        layout_alignParentTop="true"
+        layout_marginLeft="@dimen/userLogin_back_mLeft"
+        layout_marginTop="@dimen/userLogin_back_mTop"
+        background="@drawable/user_back_but_selector" />
+
+    <Button
+        id="@+id/confirm_but"
+        layout_width="wrap_content"
+        layout_height="wrap_content"
+        layout_alignParentBottom="true"
+        layout_centerHorizontal="true"
+        layout_marginBottom="@dimen/userLoginRegister_mBottom"
+        background="@drawable/user_register_but_selector"
+        text="@string/user_confirm"
+        textColor="@color/white_color"
+        textSize="@dimen/text_size_22" />
+
+    <include
+        id="@+id/ll1"
+        layout_width="match_parent"
+        layout_height="wrap_content"
+        layout_below="@+id/back_but"
+        layout_centerHorizontal="true"
+        layout_marginLeft="@dimen/userLogin_back_mLeft"
+        layout_marginRight="@dimen/userLogin_back_mLeft"
+        layout_marginTop="@dimen/userLogin_nicknamePassword_toTop"
+        layout="@layout/activity_user_login_password" />
+
+    <LinearLayout
+        layout_width="match_parent"
+        layout_height="wrap_content"
+        layout_below="@+id/ll1"
+        layout_marginLeft="@dimen/userLogin_back_mLeft"
+        layout_marginRight="@dimen/userLogin_back_mTop"
+        layout_marginTop="@dimen/userLogin_nicknamePassword_toTop"
+        gravity="center_horizontal"
+        orientation="horizontal" >
+
+        <include
+            id="@+id/validate"
+            layout_width="0dp"
+            layout_height="wrap_content"
+            layout_weight="6"
+            layout="@layout/activity_verification_code_validate" />
+
+        <Button
+            id="@+id/send_validate"
+            layout_width="@dimen/user_validate_code_width"
+            layout_height="@dimen/user_validate_code_heigh"
+            layout_gravity="bottom"
+            layout_marginLeft="12dp"
+            background="@drawable/user_register_send_validate_code_but_selector"
+            text="@string/user_send_validate_again"
+            textColor="@drawable/user_reset_validate_color"
+            textSize="@dimen/text_size_20" />
+    </LinearLayout>
+
+</RelativeLayout>
