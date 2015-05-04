@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="match_parent"
+    layout_height="match_parent"
+    orientation="vertical" >
+<!--     background="@drawable/user_bg"
+ -->
+    <RelativeLayout
+        id="@+id/layout0"
+        layout_width="fill_parent"
+        layout_height="wrap_content"
+        layout_alignParentTop="true" >
+
+        <ImageButton
+            id="@+id/back_but"
+            layout_width="wrap_content"
+            layout_height="wrap_content"
+            layout_alignParentLeft="true"
+            layout_alignParentTop="true"
+            layout_marginLeft="@dimen/userLogin_back_mLeft"
+            layout_marginTop="@dimen/userLogin_back_mTop"
+            background="@drawable/user_back_but_selector" />
+
+        <ImageButton
+            id="@+id/editor_but"
+            layout_width="wrap_content"
+            layout_height="wrap_content"
+            layout_alignParentRight="true"
+            layout_alignParentTop="true"
+            layout_marginRight="@dimen/userLogin_back_mLeft"
+            layout_marginTop="@dimen/userLogin_back_mTop"
+            background="@drawable/user_editor_but_selector" />
+    </RelativeLayout>
+
+     <include 
+             id="@+id/layout1"
+        layout_width="fill_parent"
+        layout_height="wrap_content"
+        layout_below="@+id/layout0"
+        layout_marginTop="10dip"
+            layout="@layout/activity_user_personal_center_part_personal_info" />
+
+      <include 
+             id="@+id/layout2"
+        layout_width="fill_parent"
+        layout_height="wrap_content"
+        layout_alignParentBottom="true"
+        layout_below="@+id/layout1"
+        layout_marginBottom="@dimen/user_personal_second_part_to_bottom"
+            layout="@layout/activity_user_personal_center_part_menu" />
+
+</RelativeLayout>

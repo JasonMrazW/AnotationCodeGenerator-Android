@@ -25,28 +25,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Activity代码生成器
+ * 普通类代码生成器
  * 
  * @author 95
  * 
  */
-public class ActivityGenerator extends AbstractGenerator{
+public class CustomClassGenerator extends AbstractGenerator{
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String filePath = "activity_verification_code.xml";
+		String filePath = "activity_user_personal_center_ui_layout.xml";
 
 		// 解析XML，得到node节点
 		List<Node> nodes = LayoutParser.parse(filePath);
 
 		// 根据node节点，生成class类
-		String className = "UserLoginActivity";
-		
-		ActivityGenerator generator=new ActivityGenerator();
-		
+		String className = "TestViewHolder";
+		CustomClassGenerator generator=new CustomClassGenerator();
 		String clazzContent = generator.generate(nodes, className, filePath);
 
 		try {
@@ -57,10 +55,25 @@ public class ActivityGenerator extends AbstractGenerator{
 		}
 	}
 
+	/**
+	 * 生成类头部，public class ...
+	 * @param className
+	 * @param fileName
+	 * @param sb
+	 */
+	@Override
+	protected void generateClazzHead(String className, String fileName,
+			StringBuilder sb) {
+		sb.append("@EBean)")
+				.append("\r\n");
+		sb.append("public class ").append(className)
+				.append(" {").append("\r\n	")
+				.append("\r\n	");
+	}
+
 	@Override
 	public void generateCustom(StringBuilder sb) {
 		// TODO Auto-generated method stub
 		
 	}
-	
 }

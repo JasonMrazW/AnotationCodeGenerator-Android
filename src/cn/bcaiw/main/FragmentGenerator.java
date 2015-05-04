@@ -30,23 +30,25 @@ import java.util.List;
  * @author 95
  * 
  */
-public class ActivityGenerator extends AbstractGenerator{
+public class FragmentGenerator extends AbstractGenerator{
+
+	private static final String packagePath = "code\\";
+
+	private static final String surfix = ".java";
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String filePath = "activity_verification_code.xml";
+		String filePath = "activity_user_personal_center_ui_layout.xml";
 
 		// 解析XML，得到node节点
 		List<Node> nodes = LayoutParser.parse(filePath);
 
 		// 根据node节点，生成class类
-		String className = "UserLoginActivity";
-		
-		ActivityGenerator generator=new ActivityGenerator();
-		
+		String className = "PersonalInfoFragment";
+		FragmentGenerator generator=new FragmentGenerator();
 		String clazzContent = generator.generate(nodes, className, filePath);
 
 		try {
@@ -56,11 +58,32 @@ public class ActivityGenerator extends AbstractGenerator{
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * 生成类头部，public class ...
+	 * @param className
+	 * @param fileName
+	 * @param sb
+	 */
 	@Override
-	public void generateCustom(StringBuilder sb) {
-		// TODO Auto-generated method stub
-		
+	protected void generateClazzHead(String className, String fileName,
+			StringBuilder sb) {
+		sb.append("@EFragment(R.layout.").append(fileName).append(")")
+				.append("\r\n");
+		sb.append("public class ").append(className)
+				.append(" extends BaseFragment{").append("\r\n	")
+				.append("\r\n	");
 	}
 	
+
+	/**
+	 * 子类重写，添加子类自定义内容
+	 * @param sb
+	 */
+	@Override
+	public void generateCustom(StringBuilder sb){
+		sb.append("@Override\r\n	")
+		.append("public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {")
+		.append("\r\n	return null;\r\n}\r\n\r\n");
+	}
 }

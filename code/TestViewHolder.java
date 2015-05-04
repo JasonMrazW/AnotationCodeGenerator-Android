@@ -19,65 +19,74 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-@EActivity(R.layout.activity_verification_code.xml)
-public class UserLoginActivity extends BaseActivity{
+@EBean)
+public class TestViewHolder {
 	
-	@ViewById(R.id.LayoutMain)
-	RelativeLayout	mLayoutMain;
+	@ViewById(R.id.Layout0)
+	RelativeLayout	mLayout0;
 	
 	@ViewById(R.id.Back_but)
 	ImageButton	mBack_but;
 	
-	@ViewById(R.id.Confirm_but)
-	Button	mConfirm_but;
+	@ViewById(R.id.Editor_but)
+	ImageButton	mEditor_but;
 	
-	@ViewById(R.id.Send_validate)
-	Button	mSend_validate;
+	@ViewById(R.id.User_head)
+	ImageView	mUser_head;
 	
-	@ViewById(R.id.Password_et)
-	EditText	mPassword_et;
+	@ViewById(R.id.User_name)
+	EditText	mUser_name;
 	
-	@ViewById(R.id.PasswordDeleteIcon)
-	ImageButton	mPasswordDeleteIcon;
+	@ViewById(R.id.User_work)
+	TextView	mUser_work;
 	
-	@ViewById(R.id.Validate_et)
-	EditText	mValidate_et;
+	@ViewById(R.id.User_age)
+	TextView	mUser_age;
 	
-	@ViewById(R.id.ValidateDeleteIcon)
-	ImageButton	mValidateDeleteIcon;
+	@ViewById(R.id.Alter_password_but)
+	Button	mAlter_password_but;
+	
+	@ViewById(R.id.About_app_but)
+	Button	mAbout_app_but;
+	
+	@ViewById(R.id.Feed_back_but)
+	Button	mFeed_back_but;
+	
+	@ViewById(R.id.Cancel_but)
+	Button	mCancel_but;
 	
 	@Click(R.id.Back_but)
 	public void onBack_butClicked(View view){
 	ViewClicker.ondelay(view);
 	}
 	
-	@Click(R.id.Confirm_but)
-	public void onConfirm_butClicked(View view){
+	@Click(R.id.Editor_but)
+	public void onEditor_butClicked(View view){
 	ViewClicker.ondelay(view);
 	}
 	
-	@Click(R.id.Send_validate)
-	public void onSend_validateClicked(View view){
+	@Click(R.id.Alter_password_but)
+	public void onAlter_password_butClicked(View view){
 	ViewClicker.ondelay(view);
 	}
 	
-	@Click(R.id.PasswordDeleteIcon)
-	public void onPasswordDeleteIconClicked(View view){
+	@Click(R.id.About_app_but)
+	public void onAbout_app_butClicked(View view){
 	ViewClicker.ondelay(view);
 	}
 	
-	@Click(R.id.ValidateDeleteIcon)
-	public void onValidateDeleteIconClicked(View view){
+	@Click(R.id.Feed_back_but)
+	public void onFeed_back_butClicked(View view){
 	ViewClicker.ondelay(view);
 	}
 	
-	@TextChange(R.id.Password_et)
-	public void onTextChangedOnPassword_et(CharSequence s, TextView hello, int before, int start, int count){
-	
+	@Click(R.id.Cancel_but)
+	public void onCancel_butClicked(View view){
+	ViewClicker.ondelay(view);
 	}
 	
-	@TextChange(R.id.Validate_et)
-	public void onTextChangedOnValidate_et(CharSequence s, TextView hello, int before, int start, int count){
+	@TextChange(R.id.User_name)
+	public void onTextChangedOnUser_name(CharSequence s, TextView hello, int before, int start, int count){
 	
 	}
 	

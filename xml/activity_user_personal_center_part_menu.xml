@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    layout_width="match_parent"
+    layout_height="match_parent"
+    gravity="center"
+    orientation="vertical" >
+
+    <Button
+        id="@+id/alter_password_but"
+        style="@style/user_select_property"
+        text="@string/user_personal_center_alter_password" />
+
+    <Button
+        id="@+id/about_app_but"
+        style="@style/user_select_property_to_top"
+        text="@string/user_personal_center_about_app" />
+
+    <Button
+        id="@+id/feed_back_but"
+        style="@style/user_select_property_to_top"
+        text="@string/user_personal_center_fadeback" />
+
+    <Button
+        id="@+id/cancel_but"
+        style="@style/user_select_property_personal_write_off"
+        text="@string/user_personal_center_write_off" />
+
+</LinearLayout>
