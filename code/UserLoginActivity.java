@@ -81,11 +81,6 @@ public class UserLoginActivity extends BaseActivity{
 	
 	}
 	
-		@AfterViews
-	public void init(){
-	//TODO do something
-	}
-
 	@SupposeBackground
 	public void onRequestComplete(String json, String tag) {
 	 super.onRequestComplete(json, tag);
